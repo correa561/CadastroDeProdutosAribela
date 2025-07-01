@@ -6,16 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-public class Controller {
+public class UsuarioController {
 
-    @GetMapping("/inicio")
+    @GetMapping("/logar")
     String inicioDoSite (){
         return "Bem vindo ao site caralho";
-    }
-
-    @GetMapping("/inicio/do/site/2")
-    String inicioDoSite2(){
-        return"Oi";
     }
 
 
