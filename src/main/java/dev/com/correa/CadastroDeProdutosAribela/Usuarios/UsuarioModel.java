@@ -17,14 +17,21 @@ public class UsuarioModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id")
     Long id;
+
+    @Column(name = "Usuario")
     private String usuario;
+
+    @Column(unique = true)
     private String email;
+
+    @Column(name = "Senha")
     private String senha;
 
     @OneToMany
     @JoinColumn (name = "produtos_id")
     private ProdutosModel produtos;
-
 
 }
